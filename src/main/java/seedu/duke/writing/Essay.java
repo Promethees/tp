@@ -1,28 +1,40 @@
 package seedu.duke.writing;
 
-import seedu.duke.history.History;
-import seedu.duke.writing.Writings;
-
 public class Essay extends Writings {
-    private String content;
+    private int numberOfSentences;
+    private int numberOfWords;
+    private int countEssays;
 
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
+    public Essay(String title, int id, String topic, String date, String content) {
+        this.title = title;
+        this.id = id;
+        this.topic = topic;
+        this.date = date;
         this.content = content;
+        this.author = getAuthor();
+        countEssays++;
     }
 
-    /*
-    public void setAuthor(String author) {
-        super.author = author;
+    public void setNumberOfSentences() {
+        int count = 0;
+        for (int i = 0; i < this.content.length(); i++) {
+            if (this.content.charAt(i) == '.') {
+                count++;
+            }
+        }
+        this.numberOfSentences = count;
     }
 
-    @Override
-    public String getAuthor() {
-        return super.author;
+    public void setNumberOfWords() {
+        int count = 0;
+        for (int i = 0; i < this.content.length(); i++) {
+            if (this.content.charAt(i) == ' ') {
+                count++;
+            }
+        }
     }
 
-     */
+    public int getCountEssays() {
+        return countEssays;
+    }
 }

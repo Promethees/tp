@@ -129,13 +129,17 @@ public class UI {
         printDivider();
     }
 
+    public static void printAskForName(String username) {
+        System.out.print(ClickerMessages.ASK_FOR_NAME);
+    }
+
     /**
      * Prints the personalised farewell message.
      *
      * @param username user indicated name
      */
     public static void printFarewellMessage(String username) {
-        System.out.printf(ClickerMessages.FAREWELL_GREETING, username);
+        System.out.printf(ClickerMessages.FAREWELL_GREETING);
     }
 
     /**
