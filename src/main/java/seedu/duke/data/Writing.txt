@@ -1,0 +1,19 @@
+*id: 1id
+*Author: Minh Thong
+*Type: Essay
+*Title: MockEssay
+*Topic: Freestyle
+*Date: 2020-02-28
+*Content:
+This is a mock essay.
+----------------------------
+*id: 2
+*Author: Amelia
+*Type: Poem
+*Title: Bunny Poem
+*Topic: Bunny
+*Date: 2020-10-12
+*Content:
+I love my bunny
+I love bunnies a lot!
+----------------------------

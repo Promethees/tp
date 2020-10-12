@@ -20,7 +20,19 @@ public class WritingList {
         return writing.get(i);
     }
 
-    public Writings remove(int i) {
+    public void remove(int i) {
         writing.remove(i);
+    }
+
+    /**
+     *  print all of the current writings in the Arraylist with details.
+     */
+    public void printWritings() {
+        for (int i = 0; i < countWriting; i++) {
+            System.out.println(writing.get(i).title);
+            System.out.println(writing.get(i).author);
+            System.out.println(writing.get(i).content);
+            System.out.println(writing.get(i).date);
+        }
     }
 }

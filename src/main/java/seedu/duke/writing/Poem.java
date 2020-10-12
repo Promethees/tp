@@ -1,9 +1,21 @@
 package seedu.duke.writing;
 
+import seedu.duke.user.User;
+
 public class Poem extends Writings {
     private int numberOfLines;
     private int numberOfWords;
     private int countPoems;
+
+    public Poem(String title, int id, String topic, String date, String content, String author) {
+        this.title = title;
+        this.id = id;
+        this.topic = topic;
+        this.date = date;
+        this.content = content;
+        this.author = new User(author);
+        countPoems++;
+    }
 
     public Poem(String title, int id, String topic, String date, String content) {
         this.title = title;

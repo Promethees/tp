@@ -9,6 +9,7 @@ public abstract class Writings {
     protected String date;
     protected String content;
     protected User author;
+    protected String type;
 
     public String getTitle() {
         return title;
@@ -56,5 +57,9 @@ public abstract class Writings {
 
     public void setAuthor(User author) {
         this.author = author;
+    }
+
+    public String getType() {
+        return type;
     }
 }

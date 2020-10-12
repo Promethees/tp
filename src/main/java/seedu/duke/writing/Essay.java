@@ -1,9 +1,21 @@
 package seedu.duke.writing;
 
+import seedu.duke.user.User;
+
 public class Essay extends Writings {
     private int numberOfSentences;
     private int numberOfWords;
     private int countEssays;
+
+    public Essay(String title, int id, String topic, String date, String content, String author) {
+        this.title = title;
+        this.id = id;
+        this.topic = topic;
+        this.date = date;
+        this.content = content;
+        this.author = new User(author);
+        countEssays++;
+    }
 
     public Essay(String title, int id, String topic, String date, String content) {
         this.title = title;

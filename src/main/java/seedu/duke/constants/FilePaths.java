@@ -22,9 +22,9 @@ public class FilePaths {
     public static final String TEST_FILE_PATH = "testFile.txt";
 
     /**
-     * Path to store user past history.
+     * Path to store user past writings.
      */
-    public static final String HISTORY_FILE_PATH = "data/History.txt";
+    public static final String WRITING_FILE_PATH = "data/Writing.txt";
 
     /**
      * The general path to store the statistics of the past quizzes.

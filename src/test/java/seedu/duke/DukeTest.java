@@ -1,4 +1,4 @@
-package seedu.duke;
+/*package seedu.duke;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertAll;
@@ -10,4 +10,4 @@ class DukeTest {
     public void sampleTest() {
         assertTrue(true);
     }
-}
+}*/
