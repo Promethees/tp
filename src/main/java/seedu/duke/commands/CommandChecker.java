@@ -13,7 +13,6 @@ public enum CommandChecker {
     LIST_WORDS,
     FILTER_WORDS,
 
-    NAME,
     GEN_NAME,
     LIST_NAMES,
     FILTER_NAMES,
@@ -21,6 +20,10 @@ public enum CommandChecker {
     BUNNY,
     LIST_BUNNY,
     FILTER_BUNNY,
+
+    CHARACTER,
+    LIST_CHARACTER,
+    FILTER_CHARACTER,
 
     STATS,
     DELETE,
@@ -30,7 +33,7 @@ public enum CommandChecker {
     UNRECOGNISED;
 
     /**
-     *  Figures out the command type from userInput.
+     * Figures out the command type from userInput.
      *
      * @param userInput string containing user input command
      * @return the type of command detected
@@ -48,8 +51,6 @@ public enum CommandChecker {
             return CommandChecker.VERB;
         } else if (userInput.toLowerCase().trim().startsWith("adj")) {
             return CommandChecker.ADJ;
-        } else if (userInput.toLowerCase().trim().startsWith("filter")) {
-            return CommandChecker.FILTER_WORDS;
         } else if (userInput.toLowerCase().trim().startsWith("list words")) {
             return CommandChecker.LIST_WORDS;
         } else if (userInput.toLowerCase().trim().startsWith("bunny")) {
@@ -64,6 +65,14 @@ public enum CommandChecker {
             return CommandChecker.SCENE;
         } else if (userInput.toLowerCase().trim().startsWith("topic")) {
             return CommandChecker.TOPIC;
+        } else if (userInput.toLowerCase().trim().startsWith("name")) {
+            return CommandChecker.GEN_NAME;
+        } else if (userInput.toLowerCase().trim().startsWith("list names")) {
+            return CommandChecker.LIST_NAMES;
+        } else if (userInput.toLowerCase().trim().startsWith("filter names")) {
+            return CommandChecker.FILTER_NAMES;
+        } else if (userInput.toLowerCase().trim().startsWith("filter")) {
+            return CommandChecker.FILTER_WORDS;
         } else {
             return CommandChecker.UNRECOGNISED;
         }

@@ -9,6 +9,9 @@ import seedu.duke.filters.FilterExecutor;
 import seedu.duke.ui.UI;
 
 import seedu.duke.wordlist.WordList;
+import seedu.duke.filters.FilterExecutor;
+import seedu.duke.names.Names;
+
 
 import static seedu.duke.ui.UI.printHelpMessage;
 
@@ -54,6 +57,19 @@ public class CommandExecutor {
         case FILTER_BUNNY:
             // filter for bunny
             break;
+        case GEN_NAME:
+            try {
+                Names.getName();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+            break;
+        case FILTER_NAMES:
+            Names.filterNames(userInput);
+            break;
+        case LIST_NAMES:
+            Names.listNames();
+            break;
         case STATS:
             //print user stats
             break;
@@ -64,7 +80,7 @@ public class CommandExecutor {
             //close the program
             break;
         default:
-            //print confused message
+            UI.commandNotRecognisedMsg();
         }
     }
 }

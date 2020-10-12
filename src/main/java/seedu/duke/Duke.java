@@ -9,6 +9,8 @@ import seedu.duke.constants.Logos;
 import seedu.duke.history.History;
 import seedu.duke.user.User;
 
+import static seedu.duke.bunnylist.BunnyList.bunniesList;
+import static seedu.duke.database.BunnyLoader.loadBunnyFile;
 import static seedu.duke.database.UserSettingsLoader.loadUserSettings;
 
 
@@ -41,6 +43,8 @@ public class Duke {
     public static void main(String[] args) {
         setUserSettingsArrayList(savedSettings, username);
         loadUserSettings(savedSettings);
+        loadBunnyFile(bunniesList);
+
         printDivider();
         username = savedSettings.get(0);
 
