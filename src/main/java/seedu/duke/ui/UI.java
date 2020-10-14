@@ -133,6 +133,10 @@ public class UI {
         printDivider();
     }
 
+    public static void printAskForName(String username) {
+        System.out.print(ClickerMessages.ASK_FOR_NAME);
+    }
+
     /**
      * Prints the personalised farewell message.
      *
@@ -230,4 +234,5 @@ public class UI {
         System.out.println("No bunny matching filter options");
 
     }
+
 }
