@@ -34,8 +34,7 @@ public class Duke {
     public static String username = "User";
     public static ArrayList<String> savedSettings = new ArrayList<>(NUMBER_OF_SETTINGS);
     public static final WritingList writings = new WritingList();
-    //public static ArrayList<Writings> savedHistory = new ArrayList<>(NUMBER_OF_HISTORY);
-
+    public static User user;
 
     /**
      * Main entry-point for the Fluffle application.
@@ -53,7 +52,7 @@ public class Duke {
         printHelloMessage(username);
         printAskForName(username);
         username = getUserInput(SCANNER);
-        User user = new User(username);
+        user = new User(username);
         user.greetUser();
         user.printInstruction();
         String userInput;

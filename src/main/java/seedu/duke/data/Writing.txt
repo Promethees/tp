@@ -1,4 +1,4 @@
-*id: 1id
+*id: 1
 *Author: Minh Thong
 *Type: Essay
 *Title: MockEssay

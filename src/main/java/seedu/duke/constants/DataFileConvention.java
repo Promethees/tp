@@ -24,4 +24,6 @@ public class DataFileConvention {
     public static final String POEM = "Poem";
 
     public static final String ESSAY = "Essay";
+
+    public static final int LENGTH_OF_DATE = 10;
 }

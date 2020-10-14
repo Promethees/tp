@@ -2,10 +2,11 @@ package seedu.duke.user;
 
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
+import static seedu.duke.constants.DataFileConvention.LENGTH_OF_DATE;
 
 public class User {
     private String name;
-    private LocalDateTime registeredDate;
+    private String registeredDate;
 
     public User(String name) {
         setName(name);
@@ -16,7 +17,7 @@ public class User {
         return name;
     }
 
-    public LocalDateTime getRegisteredDate() {
+    public String getRegisteredDate() {
         return registeredDate;
     }
 
@@ -27,7 +28,7 @@ public class User {
     public void setRegisteredDate() {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         LocalDateTime now = LocalDateTime.now();
-        this.registeredDate = now;
+        this.registeredDate = now.toString().substring(0, LENGTH_OF_DATE);
     }
 
     public void greetUser() {
@@ -42,6 +43,6 @@ public class User {
     @Override
     public String toString() {
         return "Your username is: " + name
-                + "Your registeredDate is" + registeredDate;
+                + "Your registeredDate is: " + registeredDate;
     }
 }

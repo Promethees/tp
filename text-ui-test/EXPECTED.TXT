@@ -10,19 +10,8 @@ Write a story with
 Hello User! Welcome to Fluffle!
 What can I do for you?
 --------------------------------------------------------------
---------------------------------------------------------------
-Type 'help c\<function name here>' to view help for each command.
-Available commands:
-add
-settings
-list
-history
-stats
-review
-quiz
-clear
-exit
---------------------------------------------------------------
---------------------------------------------------------------
---------------------------------------------------------------
-Bye User! Hope to see you again soon!
+What is your name?
+Fluffle
+Hello Fluffle. Welcome to Fluffle!
+Your registration has been recorded at 2020-10-13
+Please type in the following commands to proceed!

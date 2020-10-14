@@ -80,9 +80,9 @@ public class WritingsLoader {
                     content = content.concat(currentLine + "\n");
                 }
                 if (type.equals(POEM)) {
-                    writings.add(new Poem(title, id, topic, date, content, author));
+                    writings.add(new Poem(title, id, topic, content, author));
                 } else if (type.equals(ESSAY)) {
-                    writings.add(new Essay(title, id, topic, date, content, author));
+                    writings.add(new Essay(title, id, topic, content, author));
                 }
                 if (countContent != NUMBER_OF_WRITING_COMPONENT) {
                     throw new NotEnoughWritingComponentException();
