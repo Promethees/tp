@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 import seedu.duke.exceptions.BunnyIdeaMissingException;
 import seedu.duke.exceptions.CommandMissingArgumentsException;
+import seedu.duke.exceptions.MissingFilterOptionsException;
+import seedu.duke.exceptions.NoFilteredItemsException;
 import seedu.duke.filters.FilterExecutor;
 import seedu.duke.ui.UI;
 
@@ -25,6 +27,11 @@ import static seedu.duke.parsers.Parsers.getUserInput;
 import static seedu.duke.Duke.writings;
 import static seedu.duke.Duke.user;
 
+import java.io.IOException;
+
+import static seedu.duke.bunnylist.BunnyList.bunniesList;
+import static seedu.duke.database.BunnySaver.saveAllBunny;
+import static seedu.duke.filters.BunnyFilter.filterBunny;
 import static seedu.duke.ui.UI.printHelpMessage;
 
 public class CommandExecutor {
@@ -36,12 +43,12 @@ public class CommandExecutor {
         case HELP:
             printHelpMessage(userInput);
             break;
-        case USERNAME:
-            // change username
-            break;
-        case DIVIDER:
-            // choose divider type
-            break;
+        //case USERNAME:
+        //    // change username
+        //    break;
+        //case DIVIDER:
+        //    // choose divider type
+        //    break;
         case NOUN:
             WordList.addNoun(userInput);
             break;
@@ -70,7 +77,21 @@ public class CommandExecutor {
             BunnyList.listBunny();
             break;
         case FILTER_BUNNY:
-            // filter for bunny
+            try {
+                filterBunny(userInput, bunniesList);
+            } catch (MissingFilterOptionsException e) {
+                UI.bunnyMissingFilterOption();
+            } catch (NoFilteredItemsException e) {
+                UI.bunnyFilterNoneFound();
+            }
+            break;
+        case SAVE_BUNNY:
+            try {
+                saveAllBunny(bunniesList);
+                UI.bunnySaved();
+            } catch (IOException e) {
+                UI.failedToSaveBunny();
+            }
             break;
         case GEN_NAME:
             try {
