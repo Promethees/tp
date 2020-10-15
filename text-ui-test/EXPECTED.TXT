@@ -13,5 +13,5 @@ What can I do for you?
 What is your name?
 Fluffle
 Hello Fluffle. Welcome to Fluffle!
-Your registration has been recorded at 2020-10-13
+Your registration has been recorded at 2020-10-15
 Please type in the following commands to proceed!
