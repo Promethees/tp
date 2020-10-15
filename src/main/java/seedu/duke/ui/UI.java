@@ -149,6 +149,11 @@ public class UI {
         System.out.println(currentLineDivider);
     }
 
+    public static void printAskForName(String username) {
+        System.out.print(ClickerMessages.ASK_FOR_NAME);
+    }
+
+
     public static void addBunnyMessage(String bunny) {
         System.out.println(ClickerMessages.ADD_BUNNY_MSG + "\n" + bunny);
     }
