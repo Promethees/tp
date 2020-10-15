@@ -17,6 +17,7 @@ import static seedu.duke.commands.CommandChecker.extractCommandType;
 
 import static seedu.duke.functions.CommandExecutor.executeCommand;
 import static seedu.duke.parsers.Parsers.getUserInput;
+import static seedu.duke.parsers.Parsers.parseDoubleCharacterTaggedParamsFromUserInput;
 import static seedu.duke.ui.UI.printDivider;
 import static seedu.duke.ui.UI.printFarewellMessage;
 import static seedu.duke.ui.UI.printHelloMessage;
@@ -57,6 +58,7 @@ public class Duke {
             commandChecker = extractCommandType(userInput);
             executeCommand(commandChecker, userInput);
             printDivider();
+            System.out.println("ab");
         }
 
         printFarewellMessage(username);
